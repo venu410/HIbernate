@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.hibernate.first.example.pojo.Employee" table="Employee_Details">
+		<id name="id" column="Emp_Id">
+			<generator class="increment"></generator>
+			<!-- <generator class="assigned"></generator> -->
+			<!-- <generator class="sequence">
+				<param name="sequence">VENU</param>
+			</generator> -->
+			<!-- <generator class="com.hibernate.first.example.client.CustomIdGenerator"></generator> -->  
+		</id>
+
+		<property name="name" column="Emp_Name" />
+		<property name="employerName" column="ComanyName" />
+		<property name="salary" column="Emp_Salary"></property>
+	</class>
+
+</hibernate-mapping>
